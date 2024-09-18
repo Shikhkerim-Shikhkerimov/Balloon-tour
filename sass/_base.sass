@@ -1,0 +1,31 @@
+*
+    box-sizing: border-box
+
+html
+    font-size: 62.5%
+    scroll-behavior: smooth
+    @include adaptiv(1350px)
+        font-size: 55%
+    @include adaptiv(1199px)
+        font-size: 43.8%
+    @include adaptiv(970px)
+        font-size: 40.6%
+    @include adaptiv(910px)
+        font-size: 37.5%
+    @include adaptiv(830px)
+        font-size: 31.3%
+    @include adaptiv(690px)
+        font-size: 25%
+    @include adaptiv(540px)
+        font-size: 18.8%
+
+body
+    padding: 5rem
+
+.container
+    background: #F7F7F7
+    max-width: 144rem
+    margin: 0 auto
+    position: relative
+    z-index: 0
+    overflow: hidden
