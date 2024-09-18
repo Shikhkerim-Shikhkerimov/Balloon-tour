@@ -1,0 +1,166 @@
+// кнопка забронировать
+@mixin main-btn($background, $color)
+    padding: 1.5rem 4rem
+    border-radius: 5rem
+    background: $background
+    display: flex
+    align-items: center
+    justify-content: center
+    text-align: center
+    text-decoration: none
+    font-family: "Lato-Semibold"
+    font-size: 2rem
+    letter-spacing: 0.25em
+    color: $color
+    transition: all .5s
+    position: relative
+    animation: main-big-btn 2s
+    &:hover
+        transform: translateY(-.5rem)
+        box-shadow: $box-shadow-light
+        &::before
+            content: ""
+            animation: main-btn .7s
+    &::before
+        content: ""
+        width: 100%
+        height: 100%
+        border-radius: 5rem
+        background: $background
+        position: absolute
+        z-index: -1
+        animation: main-btn2 .7s
+        opacity: 0
+    &:active
+        transform: translateY(-.1rem)
+
+// загаловок 2-го уровня
+@mixin title-h2($color)
+    font-family: "Lato ExtraBold"
+    font-size: 3.6rem
+    letter-spacing: 0.28em
+    display: inline-block
+    background: $gradien-brown_light-brown_darck
+    background-clip: text
+    color: $color
+    transition: .5s
+
+// загаловок 3-го уровня
+@mixin title-h3
+    font-family: "Lato-Bold"
+    font-size: 2rem
+    letter-spacing: 0.1em
+    color: $color-grey
+
+// контейнер для карточек
+@mixin section-cards-about
+    border-radius: .5rem
+    width: 24rem
+    height: 30rem
+    background: $white-linear-gradient
+    text-align: center
+    box-shadow: $box-shadow-light
+    transition: all .5s
+    padding: 2.5rem 2.5rem
+    &:hover
+        transform: translateY(-1rem) scale(1.05, 1.05)
+
+// контейнер для карточек с турами
+@mixin cards-tours
+    width: 34rem
+    height: 52rem
+    font-size: 1.6rem
+    position: relative
+    perspective: 150rem
+    &__front-card
+        width: 100%
+        height: 100%
+        border-radius: .3rem
+        background: $color-white
+        box-shadow: $box-shadow-light
+        position: absolute
+        z-index: 1
+        transition: all 1.5s
+        backface-visibility: hidden
+        &_img
+            width: 100%
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 78%)
+            margin-bottom: 4.5rem
+        &_text
+            font-family: "Lato-Light"
+            font-size: 2.8rem
+            letter-spacing: 0.07em
+            color: $color-white
+            background: $gradien-brown_light-brown_darck
+            position: absolute
+            top: 17.7rem
+            right: 0
+            text-align: right
+            padding: 1rem 1.8rem 0 
+            span
+                position: absolute
+                top: 3.6rem
+                right: 0
+                background: $gradien-brown_light-brown_darck
+                padding: .5rem 1.8rem 1rem 1rem
+        &_item
+            font-family: "Lato-Bold"
+            letter-spacing: 0.12em
+            text-decoration: underline
+            color: $color-grey
+            text-align: center
+            text-decoration-skip-ink: none
+            &:not(:last-child)
+                margin-bottom: 2rem
+    &:hover &__front-card
+        transform: rotateY(180deg)
+    &__back-card
+        width: 100%
+        height: 100%
+        border-radius: .3rem
+        text-align: center
+        background: $gradien-brown_light-brown_darck
+        box-shadow: $box-shadow-light
+        color: $color-white
+        padding: 10rem 3.2rem
+        position: absolute
+        top: 0
+        left: 0
+        transform: rotateY(-180deg)
+        transition: all 1.5s
+        backface-visibility: hidden
+        &_text
+            font-family: "Lato-Light"
+            letter-spacing: 0.12em
+            margin-bottom: 8.7rem
+        &_price
+            font-family: "Lato-Medium"
+            font-size: 6rem
+            letter-spacing: 0.03em
+            margin-bottom: 8.7rem
+    &:hover &__back-card
+        transform: rotateY(0deg)
+
+// адаптация
+@mixin adaptiv($max-width)
+    @if $max-width == 1350px
+        @media (max-width: 1350px)
+            @content
+    @if $max-width == 1199px
+        @media (max-width: 1199px)
+            @content
+    @if $max-width == 970px
+        @media (max-width: 970px)
+            @content
+    @if $max-width == 910px
+        @media (max-width: 910px)
+            @content
+    @if $max-width == 830px
+        @media (max-width: 830px)
+            @content
+    @if $max-width == 690px
+        @media (max-width: 690px)
+            @content
+    @if $max-width == 540px
+        @media (max-width: 540px)
+            @content

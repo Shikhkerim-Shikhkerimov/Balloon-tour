@@ -1,0 +1,82 @@
+// nav-button
+.nav-button
+    position: absolute
+    top: 10rem
+    right: 8rem
+    z-index: 5
+    &__input
+        display: none
+    &__input:checked ~ &__background
+        display: inline-block
+        transform: translate(-35rem, 5rem)
+    &__input:checked ~ &__btn::before
+        transform: rotate(-45deg)
+        height: .2rem
+        top: 50%
+        left: 29%
+    &__input:checked ~ &__btn::after
+        transform: rotate(45deg)
+        height: .2rem
+        top: 50%
+        left: 29%
+    &__input:checked ~ &__btn span
+        display: none
+    &__background
+        width: 37rem
+        height: max-content
+        background: rgba(161, 79, 3, .90)
+        border-radius: 1rem
+        padding: 2rem
+        position: fixed
+        top: 10rem
+        right: -22rem
+        text-align: center
+        display: none
+    &__btn
+        width: 7rem
+        height: 7rem
+        background: $color-white
+        border-radius: 100%
+        cursor: pointer
+        position: fixed
+        top: 10rem
+        span, &::before, &::after
+            content: ""
+            width: 3rem
+            height: .2rem
+            background: black
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            transition: all .1s
+        &::before
+            top: 40%
+        &:hover::before
+            height: .1rem
+            top: 38%
+        &::after
+            top: 60%
+        &:hover::after
+            height: .1rem
+            top: 62%
+
+.navigation
+    &__item
+        transition: all .5s
+        &:not(:last-child)
+            margin-bottom: 2rem
+        &:hover
+            transform: scale(1.1)
+    &__a
+        font-family: "InterLight"
+        font-size: 2.5rem
+        letter-spacing: 0.12em
+        color: $color-white
+        text-decoration: none
+        transition: all .5s
+        &:hover
+            padding: 0 .5rem
+            color: $brown-color-darck
+            background: white
+            border-radius: 1rem
