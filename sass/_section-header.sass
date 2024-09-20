@@ -1,0 +1,45 @@
+.section-header
+    height: 75rem
+    background: $gradient-brown-black, url("../img/фон-1.jpg") center / cover no-repeat
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 83%)
+    position: relative
+    &__logo
+        max-width: 5.6rem
+        display: inline-block
+        position: absolute
+        top: 5rem
+        left: 5rem
+        animation: logo 2s
+    &__logo-img
+        width: 100%
+    &__title-header
+        position: absolute
+        top: 40%
+        left: 50%
+        transform: translate(-50%, -50%)
+        text-align: center
+        width: 100%
+
+// заголовок и текст
+.title-header
+    color: $color-white
+    display: flex
+    flex-direction: column
+    align-items: center
+    perspective: 150rem
+    &__h1
+        font-family: "Lato ExtraBold"
+        font-size: 5rem
+        letter-spacing: 0.2em
+        margin-bottom: 1rem
+        animation: title-header-h1 2s
+    &__text
+        font-family: "Lato-Light"
+        font-size: 4rem
+        letter-spacing: 0.12em
+        margin-bottom: 5rem
+        animation: title-header-text 2s
+
+// кнопка
+.btn
+    @include main-btn($color-white, $color-grey)
