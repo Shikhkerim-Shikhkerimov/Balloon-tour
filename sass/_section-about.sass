@@ -1,0 +1,72 @@
+.section-about
+    padding: 8rem 10rem 5.4rem 10rem
+    &__title
+        margin-bottom: 8rem
+    &__content
+        display: flex
+        justify-content: space-between
+
+// правая часть секции контент
+.left-side
+    width: 50%
+    text-align: left
+    color: $color-grey
+    &__title
+        margin-bottom: 1rem
+    &__text
+        max-width: 48rem
+        font-family: "Lato-Regular"
+        font-size: 1.6rem
+        line-height: 140%
+        letter-spacing: 0.12em
+        margin-bottom: 3rem
+    &__btn
+        font-family: "Lato-Bold"
+        font-size: 1.6rem
+        letter-spacing: 0.12em
+        text-decoration: none
+        color: $brown-color-light
+        padding: 1rem .8rem 1.5rem .8rem
+        border-bottom: .1rem solid $brown-color-light
+        display: inline-block
+        &:hover
+            background: $brown-color-light
+            color: $color-white
+            box-shadow: $box-shadow
+
+.title
+    text-align: center
+
+
+
+
+// левая часть секции с изображениями
+.right-side
+    width: 53.8rem
+    height: 35rem
+    position: relative
+    transition: all .5s
+
+    &__img
+        width: 32rem
+        position: absolute
+        transition: all .5s
+        border-radius: .5rem
+        box-shadow: $box-shadow
+        &_1
+            top: 0 
+            left: 0
+        &_2
+            top: 9rem
+            left: 22rem
+        &_3
+            top: 14.5rem
+            left: 2.2rem
+        &:hover
+            transform: scale(1.1)
+            z-index: 1
+            outline: .4rem solid $brown-color-light
+            border-radius: 1rem
+            padding: .2rem
+    &:hover
+        transform: scale(.99)
