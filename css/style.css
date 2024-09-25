@@ -471,3 +471,41 @@ body {
 .right-side:hover {
   transform: scale(0.99);
 }
+
+.section-cards {
+  min-height: 73rem;
+  background: linear-gradient(90deg, rgba(186, 133, 84, 0.7) 0%, rgba(185, 133, 84, 0.7) 0.01%, rgba(1, 1, 1, 0.7) 100%), url("../img/фон-2.jpg") center/cover no-repeat;
+  -webkit-clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 85%);
+          clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 85%);
+  padding: 0 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.section-cards__box {
+  border-radius: 0.5rem;
+  width: 24rem;
+  height: 30rem;
+  background: rgba(255, 255, 255, 0.85);
+  text-align: center;
+  box-shadow: 0 0.4rem 0.4rem 0 rgba(0, 0, 0, 0.1);
+  transition: all 0.5s;
+  padding: 2.5rem 2.5rem;
+}
+.section-cards__box:hover {
+  transform: translateY(-1rem) scale(1.05, 1.05);
+}
+.section-cards__icon {
+  margin-bottom: 2.4rem;
+  width: 6.3rem;
+}
+.section-cards__title {
+  margin-bottom: 1rem;
+}
+.section-cards__text {
+  font-family: "Lato-Regular";
+  font-size: 1.6rem;
+  letter-spacing: 0.12em;
+  text-align: center;
+  color: #777777;
+}

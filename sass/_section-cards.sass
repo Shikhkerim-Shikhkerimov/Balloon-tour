@@ -1,0 +1,21 @@
+.section-cards
+    min-height: 73rem
+    background: $gradient-brown-black, url("../img/фон-2.jpg") center / cover no-repeat
+    clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 85%)
+    padding: 0 10rem
+    display: flex
+    align-items: center
+    justify-content: space-between
+    &__box
+        @include section-cards-about
+    &__icon
+        margin-bottom: 2.4rem
+        width: 6.3rem
+    &__title
+        margin-bottom: 1rem
+    &__text
+        font-family: "Lato-Regular"
+        font-size: 1.6rem
+        letter-spacing: 0.12em
+        text-align: center
+        color: $color-grey
