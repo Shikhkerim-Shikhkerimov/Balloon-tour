@@ -742,3 +742,121 @@ body {
 .btn_brown:active {
   transform: translateY(-0.1rem);
 }
+
+.section-feedback {
+  padding: 8rem 14rem;
+  position: relative;
+}
+.section-feedback__title {
+  margin-bottom: 8rem;
+}
+.section-feedback__box {
+  margin-bottom: 8rem;
+}
+.section-feedback__btn {
+  max-width: 27.7rem;
+  margin: 0 auto;
+}
+
+.video {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -2;
+}
+.video__background {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(186, 133, 84, 0.7) 0%, rgba(185, 133, 84, 0.7) 0.01%, rgba(1, 1, 1, 0.7) 100%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.title__h2_white {
+  font-family: "Lato ExtraBold";
+  font-size: 3.6rem;
+  letter-spacing: 0.28em;
+  display: inline-block;
+  background: linear-gradient(135deg, #c3956a 3.65%, #a14f03 100%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: #FFFFFF;
+  transition: 0.5s;
+}
+
+.box-feedback {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.box-feedback__card {
+  max-width: 106rem;
+  height: 22rem;
+  background: rgba(255, 255, 255, 0.85);
+  -webkit-clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
+          clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
+  box-shadow: 0 0.4rem 0.4rem 0 rgba(0, 0, 0, 0.1);
+  padding: 3rem 10rem;
+  transition: all 0.5s;
+}
+.box-feedback__card:not(:last-child) {
+  margin-bottom: 8rem;
+}
+.box-feedback__card:hover {
+  transform: scale(1.05, 1.05);
+}
+.box-feedback__card_figure {
+  max-width: 16rem;
+  height: 16rem;
+  border-radius: 100%;
+  position: relative;
+  float: left;
+  shape-outside: circle(50%);
+  margin-right: 4rem;
+}
+.box-feedback__card_figure img {
+  width: 100%;
+  border-radius: 100%;
+  transition: all 0.5s;
+}
+.box-feedback__card:hover img {
+  transform: scale(0.9, 0.9);
+  filter: blur(0.2rem) brightness(85%);
+}
+.box-feedback__card_name {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  font-family: "Lato-Regular";
+  font-size: 2rem;
+  letter-spacing: 0.08em;
+  text-align: center;
+  color: #FFFFFF;
+  transition: all 0.5s;
+  opacity: 0;
+}
+.box-feedback__card:hover .box-feedback__card_name {
+  opacity: 1;
+  transform: translate(-50%, -30%);
+}
+.box-feedback__content {
+  max-width: 85rem;
+  padding-top: 2rem;
+}
+.box-feedback__title {
+  margin-bottom: 1rem;
+}
+.box-feedback__text {
+  font-family: "Lato-Regular";
+  font-size: 1.6rem;
+  letter-spacing: 0.12em;
+  color: #777777;
+}

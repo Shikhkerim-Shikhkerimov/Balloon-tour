@@ -1,0 +1,91 @@
+.section-feedback
+    padding: 8rem 14rem
+    position: relative
+    &__title
+        margin-bottom: 8rem
+    &__box
+        margin-bottom: 8rem
+    &__btn
+        max-width: 27.7rem
+        margin: 0 auto
+
+// видео
+.video
+    width: 100%
+    height: 100%
+    position: absolute
+    top: 0
+    left: 0
+    object-fit: cover
+    z-index: -2
+    &__background
+        width: 100%
+        height: 100%
+        background: $gradient-brown-black
+        position: absolute
+        top: 0
+        left: 0
+        z-index: -1 
+
+// заголовок
+.title__h2_white
+    @include title-h2($color-white)
+
+// контейнер с отзывами
+.box-feedback
+    width: 100%
+    display: flex
+    flex-direction: column
+    align-items: center
+    &__card
+        max-width: 106rem
+        height: 22rem
+        background: $white-linear-gradient
+        clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%)
+        box-shadow: $box-shadow-light
+        padding: 3rem 10rem
+        &:not(:last-child)
+            margin-bottom: 8rem
+        transition: all .5s
+        &:hover
+            transform: scale(1.05, 1.05)
+        &_figure
+            max-width: 16rem
+            height: 16rem
+            border-radius: 100%
+            position: relative
+            float: left
+            shape-outside: circle(50%)
+            margin-right: 4rem
+            img
+                width: 100%
+                border-radius: 100%
+                transition: all .5s
+        &:hover img
+            transform: scale(.9, .9)
+            filter: blur(.2rem) brightness(85%)
+        &_name
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%,50%)
+            font-family: "Lato-Regular"
+            font-size: 2rem
+            letter-spacing: 0.08em
+            text-align: center
+            color: $color-white
+            transition: all .5s
+            opacity: 0
+        &:hover &_name
+            opacity: 1
+            transform: translate(-50%,-30%)
+    &__content
+        max-width: 85rem
+        padding-top: 2rem
+    &__title
+        margin-bottom: 1rem
+    &__text
+        font-family: "Lato-Regular"
+        font-size: 1.6rem
+        letter-spacing: 0.12em
+        color: $color-grey
