@@ -860,3 +860,113 @@ body {
   letter-spacing: 0.12em;
   color: #777777;
 }
+
+.section-form {
+  padding: 10rem;
+  background: linear-gradient(135deg, #c3956a 3.65%, #a14f03 100%);
+}
+.section-form__form {
+  width: 100%;
+  height: 50rem;
+  background: linear-gradient(105deg, rgba(255, 255, 255, 0.85) 0%, rgba(255, 255, 255, 0.85) 56%, rgba(255, 255, 255, 0) 56%, rgba(255, 255, 255, 0) 100%), url("../img/фон-брон.png") center/cover no-repeat;
+  padding: 5rem 5rem;
+}
+.section-form__title {
+  text-align: left;
+  margin-bottom: 4rem;
+}
+.section-form__input1 {
+  display: flex;
+  flex-direction: column;
+  max-width: 35.5rem;
+}
+
+.input1 {
+  font-family: "Lato-Regular";
+  font-size: 1.6rem;
+  letter-spacing: 0.12em;
+  margin-bottom: 3rem;
+}
+.input1__name {
+  width: 100%;
+  height: 5.5rem;
+  padding: 1.8rem;
+  border-radius: 0.3rem;
+  margin-bottom: 1rem;
+  color: black;
+  letter-spacing: 0.12em;
+  border: none;
+  outline: none;
+}
+.input1__name:focus:invalid {
+  border-bottom: 0.3rem solid #D76363;
+  box-shadow: 0 0.4rem 0.4rem 0 rgba(0, 0, 0, 0.1);
+}
+.input1__name:focus {
+  border-bottom: 0.3rem solid #66D763;
+  box-shadow: 0 0.4rem 0.4rem 0 rgba(0, 0, 0, 0.1);
+}
+.input1__label {
+  color: #777777;
+  padding-left: 1.6rem;
+  transition: all 0.5s;
+}
+.input1__label:not(:last-child) {
+  margin-bottom: 3rem;
+}
+.input1__name:-moz-placeholder-shown + .input1__label {
+  opacity: 0;
+  transform: translateY(-1rem);
+}
+.input1__name:placeholder-shown + .input1__label {
+  opacity: 0;
+  transform: translateY(-1rem);
+}
+
+.input2 {
+  max-width: 58rem;
+  font-family: "Lato-Regular";
+  font-size: 1.6rem;
+  letter-spacing: 0.12em;
+  color: #777777;
+  margin-bottom: 4rem;
+}
+.input2__btn {
+  display: inline-block;
+  position: relative;
+}
+.input2__btn:not(:last-child) {
+  margin-right: 2.4rem;
+}
+.input2__radio {
+  opacity: 0;
+}
+.input2__btn1 {
+  width: 3rem;
+  height: 3rem;
+  border: 0.4rem solid #A14F03;
+  border-radius: 100%;
+  position: absolute;
+  top: -0.6rem;
+  left: 0rem;
+}
+.input2__btn1::before {
+  content: "";
+  display: inline-block;
+  width: 1.4rem;
+  height: 1.4rem;
+  background: #A14F03;
+  border-radius: 100%;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.input2__label {
+  padding-left: 2rem;
+  cursor: pointer;
+}
+.input2__radio:checked ~ .input2__label .input2__btn1::before {
+  opacity: 1;
+}
