@@ -69,6 +69,14 @@
         position: absolute
         top: -.6rem
         left: 0rem
+        @include adaptiv(910px)
+            top: -.1rem
+        @include adaptiv(830px)
+            top: .3rem
+        @include adaptiv(690px)
+            top: 1rem
+        @include adaptiv(540px)
+            top: 2rem
         &::before
             content: ""
             display: inline-block

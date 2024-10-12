@@ -950,6 +950,26 @@ body {
   top: -0.6rem;
   left: 0rem;
 }
+@media (max-width: 910px) {
+  .input2__btn1 {
+    top: -0.1rem;
+  }
+}
+@media (max-width: 830px) {
+  .input2__btn1 {
+    top: 0.3rem;
+  }
+}
+@media (max-width: 690px) {
+  .input2__btn1 {
+    top: 1rem;
+  }
+}
+@media (max-width: 540px) {
+  .input2__btn1 {
+    top: 2rem;
+  }
+}
 .input2__btn1::before {
   content: "";
   display: inline-block;
